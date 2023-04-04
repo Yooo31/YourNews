@@ -1,0 +1,114 @@
+:root {
+  --primary: #007fc4;
+  --primary-i: #00679e;
+  --secondary: #910053;
+  --secondary-i: #740042;
+  --complementary: #19112e;
+  --complementary-i: #070a16;
+  --gray: #616665;
+  --gray-i: #383d3d;
+  --succes: #47b92b;
+  --error: #eb0010;
+  --info: #00b9ac;
+  --warning: #ffde32;
+}
+
+/* Text colors */
+
+.text-primary {
+  color: --primary;
+}
+
+.text-primary-i {
+  color: --primary-i;
+}
+
+.text-secondary {
+  color: --secondary;
+}
+
+.text-secondary-i {
+  color: --secondary-i;
+}
+
+.text-complementary {
+  color: --complementary;
+}
+
+.text-complementary-i {
+  color: --complementary-i;
+}
+
+.text-gray {
+  color: --gray;
+}
+
+.text-gray-i {
+  color: --gray-i;
+}
+
+.text-succes {
+  color: --succes;
+}
+
+.text-error {
+  color: --error;
+}
+
+.text-info {
+  color: --info;
+}
+
+.text-warning {
+  color: --warning;
+}
+
+/* Background Colors */
+
+.bg-primary {
+  background-color: --primary;
+}
+
+.bg-primary-i {
+  background-color: --primary-i;
+}
+
+.bg-secondary {
+  background-color: --secondary;
+}
+
+.bg-secondary-i {
+  background-color: --secondary-i;
+}
+
+.bg-complementary {
+  background-color: --complementary;
+}
+
+.bg-complementary-i {
+  background-color: --complementary-i;
+}
+
+.bg-gray {
+  background-color: --gray;
+}
+
+.bg-gray-i {
+  background-color: --gray-i;
+}
+
+.bg-succes {
+  background-color: --succes;
+}
+
+.bg-error {
+  background-color: --error;
+}
+
+.bg-info {
+  background-color: --info;
+}
+
+.bg-warning {
+  background-color: --warning;
+}
