@@ -2,9 +2,9 @@
 
 class Database {
   private static $host = 'localhost';
-  private static $dbname = 'nom_de_la_base_de_donnees';
-  private static $username = 'nom_utilisateur';
-  private static $password = 'mot_de_passe';
+  private static $dbname = 'YourNews';
+  private static $username = 'ynAdmin';
+  private static $password = 'ynpass';
 
   public static function connect() {
     $pdo = new PDO("mysql:host=" . self::$host . ";dbname=" . self::$dbname, self::$username, self::$password);
