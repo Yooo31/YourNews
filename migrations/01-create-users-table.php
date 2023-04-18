@@ -5,8 +5,8 @@ require_once 'script/migrate.php';
 
 $pdo = Database::connect();
 
-if (!tableExists($pdo,'users')) {
-    $query = "CREATE TABLE users (
+if (!tableExists($pdo, 'users')) {
+  $query = "CREATE TABLE users (
         id INT(11) PRIMARY KEY AUTO_INCREMENT,
         email VARCHAR(255) NOT NULL,
         password VARCHAR(255) NOT NULL,
@@ -18,7 +18,5 @@ if (!tableExists($pdo,'users')) {
         reason_for_ban TEXT DEFAULT NULL
     )";
 
-    $pdo->exec($query);
+  $pdo->exec($query);
 }
-
-?>

@@ -5,8 +5,8 @@ require_once 'script/migrate.php';
 
 $pdo = Database::connect();
 
-if (!tableExists($pdo,'comments')) {
-    $query = "CREATE TABLE comments (
+if (!tableExists($pdo, 'comments')) {
+  $query = "CREATE TABLE comments (
         id INT(11) PRIMARY KEY AUTO_INCREMENT,
         user_id INT(11) NOT NULL,
         article_id INT(11) NOT NULL,
@@ -16,7 +16,5 @@ if (!tableExists($pdo,'comments')) {
         is_approved BOOLEAN DEFAULT false
     )";
 
-    $pdo->exec($query);
+  $pdo->exec($query);
 }
-
-?>
