@@ -2,9 +2,7 @@
 
 require_once 'core/Database.php';
 
-function tableExists($tableName) {
-  $pdo = Database::connect();
-
+function tableExists($pdo, $tableName) {
   $stmt = $pdo->prepare("SHOW TABLES LIKE ?");
   $stmt->execute([$tableName]);
 
@@ -13,9 +11,7 @@ function tableExists($tableName) {
   return $result !== false;
 }
 
-function columnExists($tableName, $columnName) {
-  $pdo = Database::connect();
-
+function columnExists($pdo, $tableName, $columnName) {
   $stmt = $pdo->prepare("SHOW COLUMNS FROM $tableName LIKE ?");
   $stmt->execute([$columnName]);
 
