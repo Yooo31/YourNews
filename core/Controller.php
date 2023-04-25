@@ -1,8 +1,14 @@
 <?php
+// core/Controller.php
 
 class Controller {
-  protected function view($view, $data = []) {
+  public function view($viewName, $data = []) {
     extract($data);
-    require_once "app/view/$view.php";
+    require_once "app/view/$viewName.php";
+  }
+
+  public function redirect($path) {
+    header("Location: $path");
+    exit;
   }
 }
