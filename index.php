@@ -1,38 +1,17 @@
 <?php
-error_reporting(E_ALL);
+// index.php
 
+require_once 'core/Router.php';
+require_once 'core/Controller.php';
 
-require_once 'core/Root.php';
+$router = new Router();
 
-$uri = $_SERVER['REQUEST_URI'];
+// définition des routes
+$router->get('/', 'HomeController@index');
+$router->get('/posts', 'PostsController@index');
+$router->get('/posts/create', 'PostsController@create');
+$router->get('/compte', 'CompteController@index');
+$router->get('/admin', 'AdminController@index');
 
-$root = new Root();
-$valRoot = $root -> parseUri($uri);
-
-switch($valRoot) {
-  case '':
-    require_once 'app/controller/HomeController.php';
-    $controller = new HomeController();
-    $controller->index();
-    break;
-
-  case 'posts':
-    echo 'Page des posts';
-    break;
-
-  case 'new':
-    echo 'Page de création de posts';
-    break;
-
-  case 'compte':
-    echo 'Comptes';
-    break;
-
-  case 'admin':
-    echo 'admin';
-    break;
-
-  default:
-    echo '404';
-    break;
-}
+// exécution de la route correspondante
+$router->dispatch();
