@@ -12,10 +12,6 @@ class Router {
     $this->routes['POST'][$path] = $action;
   }
 
-  public function notFound($action) {
-    $this->routes['404'] = $action;
-  }
-
   public function dispatch() {
     $method = $_SERVER['REQUEST_METHOD'];
     $path = $_SERVER['REQUEST_URI'];
