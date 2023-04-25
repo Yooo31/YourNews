@@ -2,7 +2,7 @@
 
 require_once 'Controller.php';
 
-class Root {
+class Router {
   public function parseUri($uri) {
     $parsedUri = explode('/', $uri);
 

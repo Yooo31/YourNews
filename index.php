@@ -2,14 +2,14 @@
 error_reporting(E_ALL);
 
 
-require_once 'core/Root.php';
+require_once 'core/Routeur.php';
 
 $uri = $_SERVER['REQUEST_URI'];
 
-$root = new Root();
-$valRoot = $root -> parseUri($uri);
+$router = new Router();
+$valRouter = $router -> parseUri($uri);
 
-switch($valRoot) {
+switch($valRouter) {
   case '':
     require_once 'app/controller/HomeController.php';
     $controller = new HomeController();
