@@ -1,14 +1,27 @@
 <?php
 
+require_once 'core/Database.php';
+
 class Home {
+  private $db;
+
+  public function __construct() {
+    $this->db = Database::connect();
+  }
+
+  public function getLatestArticle() {
+    $query = $this->db->prepare('SELECT * FROM articles ORDER BY created_at DESC LIMIT 1');
+    $query->execute();
+
+    return $query->fetch(PDO::FETCH_ASSOC);
+  }
+
   public function getLatestArticles($limit) {
-    // $db = Database::connect();
+    $query = $this->db->prepare('SELECT * FROM articles ORDER BY created_at DESC LIMIT :limit OFFSET 1');
+    $query->bindValue(':limit', $limit, PDO::PARAM_INT);
+    $query->execute();
 
-    // $query = $db->prepare('SELECT * FROM articles ORDER BY date DESC LIMIT :limit');
-    // $query->bindValue(':limit', $limit, PDO::PARAM_INT);
-    // $query->execute();
-
-    // return $query->fetchAll(PDO::FETCH_ASSOC);
+    return $query->fetchAll(PDO::FETCH_ASSOC);
   }
 }
 
