@@ -7,14 +7,18 @@
     <h1>Bienvenue sur notre site web</h1>
     <p>Voici quelques informations sur notre entreprise :</p>
 
-    <?php var_dump($latestArticles); ?>
+    <?php var_dump($posts); ?>
 
-    <?php if ($latestArticles) : ?>
-      <?php foreach ($latestArticles as $article) : ?>
-        <?php include '_home_post.php'; ?>
-      <?php endforeach; ?>
-    <?php else : ?>
-      <span>Aucun article pour le moment</span>
-    <?php endif; ?>
+    <?php
+      if ($post) {
+        require_once '_home_first_post.php';
+
+        $posts ? require_once '_home_posts.php' : '';
+      } else {
+        require_once '_home_empty.php';
+      }
+
+    ?>
+
   </body>
 </html>

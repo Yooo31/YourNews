@@ -9,6 +9,6 @@ class HomeController extends Controller {
     $latestArticle = $homeModel->getLatestArticle();
     $latestArticles = $homeModel->getLatestArticles(6);
 
-    $this->view('Home/index', ['latestArticle' => $latestArticle, 'latestArticles' => $latestArticles]);
+    $this->view('Home/index', ['post' => $latestArticle, 'posts' => $latestArticles]);
   }
 }
