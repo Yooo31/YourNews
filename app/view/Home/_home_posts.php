@@ -1,10 +1,14 @@
-<div class="posts">
-  <?php foreach ($posts as $post) : ?>
-    <div class="post">
-      <img src="assets/img/<?php echo $post['preview']?>.png" alt="">
-      <h2><?php echo $post['title']; ?></h2>
-      <h3><?php echo $post['description']; ?></h3>
-      <span class="date"><?php echo date_format(date_create($post['created_at']), "d F"); ?></span>
+<?php foreach ($posts as $post) : ?>
+  <div class="col-4">
+    <div class="post-view">
+      <a href="#">
+        <div class="post-picture lazy" style="background-image: url(&quot;assets/img/jsp.png&quot;);"></div>
+        <div class="post-desc">
+          <div class="h3"><?php echo $post['title']; ?></div>
+          <p><?php echo $post['description']; ?></p>
+          <div class="date"><?php echo date_format(date_create($post['created_at']), "d F"); ?></div>
+        </div>
+      </a>
     </div>
-  <?php endforeach; ?>
-</div>
+  </div>
+<?php endforeach; ?>
