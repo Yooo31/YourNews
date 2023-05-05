@@ -1,5 +1,3 @@
-<?php var_dump($posts); ?>
-
 <?php if ($post) { ?>
   <div class="container mt-5 mb-5">
     <div class="row align-items-center justify-content-center">

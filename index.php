@@ -21,12 +21,13 @@ $router->get('/admin', 'AdminController@index');
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/base.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/articles_list.css">
 </head>
 
 <body id="page">
 	<header>
-		<!-- NAVBAR -->
+		<?php require_once 'app/navbar.php'; ?>
 	</header>
 
 	<main>
