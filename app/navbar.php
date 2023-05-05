@@ -9,8 +9,8 @@
       <i class="fa-solid fa-times close"></i>
     </div>
     <ul class="nav-items">
-      <li><a class="text-black" href="#">Accueil</a></li>
-      <li><a class="text-black" href="#">Blog</a></li>
+      <li><a class="text-black" href="/">Accueil</a></li>
+      <li><a class="text-black" href="/posts">Blog</a></li>
       <li><a class="text-black" href="#">Administration</a></li>
     </ul>
   </div>

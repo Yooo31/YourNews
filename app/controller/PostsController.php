@@ -4,6 +4,6 @@ require_once 'core/Controller.php';
 
 class PostsController extends Controller {
   public function index() {
-    $this->view('posts');
+    $this->view('Home/index');
   }
 }
