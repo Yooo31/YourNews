@@ -22,5 +22,17 @@ class AuthController extends Controller {
       $this->view('Auth/auth_succes');
     }
   }
+
+  public function showRegistrationForm() {
+    $this->view('Auth/register');
+  }
+
+  public function register() {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+  }
 }
 
