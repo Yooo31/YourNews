@@ -4,10 +4,10 @@ require_once 'seeds/script/Seed.php';
 
 $now = date('Y-m-d H:i:s');
 
-$firstElement = [
+$seventhElement = [
   'user_id' => 18,
-  'title' => '1er article',
-  'description' => '1er article',
+  'title' => '7 article',
+  'description' => '7 article',
   'preview' => 'jsp',
   'filePath' => 'jsp',
   'created_at' => $now,
@@ -16,7 +16,7 @@ $firstElement = [
 
 $seeder = new Seeder();
 try {
-  $seeder->seed([$firstElement], 'articles', 'title');
+  $seeder->seed([$seventhElement], 'articles', 'title');
 } catch (Exception $e) {
   echo $e->getMessage() . PHP_EOL;
 }
