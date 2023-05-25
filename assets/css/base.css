@@ -378,3 +378,7 @@
 .pr-0 {
   padding-right: 0rem !important;
 }
+
+.not-visible {
+  visibility: hidden;
+}

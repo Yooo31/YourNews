@@ -12,6 +12,7 @@ $router->get('/posts', 'PostsController@index');
 $router->get('/posts/create', 'PostsController@create');
 $router->get('/compte', 'CompteController@index');
 $router->get('/admin', 'AdminController@index');
+$router->get('/connexion', 'ConnectionController@index');
 ?>
 
 <!DOCTYPE html>

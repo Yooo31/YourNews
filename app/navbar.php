@@ -11,11 +11,11 @@
     <ul class="nav-items">
       <li><a class="text-black" href="/">Accueil</a></li>
       <li><a class="text-black" href="/posts">Blog</a></li>
-      <li><a class="text-black" href="#">Administration</a></li>
+      <li class="not-visible"><a class="text-black" href="#">Administration</a></li>
     </ul>
   </div>
   <div class="nav-right">
-    <ul class="nav-items">
+    <ul class="not-visible nav-items">
       <li>
         <button class="nav-btn nav-new bg-primary text-white">Nouveau</button>
       </li>
@@ -24,6 +24,11 @@
           <i class="fa-regular fa-user"></i>
           <i class="fa-solid fa-caret-down"></i>
         </button>
+      </li>
+    </ul>
+    <ul class="nav-items">
+      <li>
+        <a href="/connexion" class="nav-btn nav-new bg-primary text-white">Connexion</a>
       </li>
     </ul>
   </div>
