@@ -18,6 +18,7 @@ class AuthController extends Controller {
     if (!$user || !password_verify($password, $user['password'])) {
       $this->view('Auth/login', ['error' => 1]);
     } else {
+      $_SESSION["is_connected"] = true;
       $this->view('Auth/auth_succes');
     }
   }

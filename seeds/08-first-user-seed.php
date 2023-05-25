@@ -6,11 +6,13 @@ $now = date('Y-m-d H:i:s');
 
 $adminUser = [
   'email' => 'yoan@mail.com',
-  'password' => 'abc',
-  'created_at' => $now,
+  'password' => 'pass',
+  'name' => 'Yoan',
+  'lastname' => 'Martins',
   'username' => 'Yoo',
   'account_type' => 'admin',
   'is_validated' => 1,
+  'created_at' => $now,
 ];
 
 $seeder = new Seeder();
