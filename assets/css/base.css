@@ -13,6 +13,10 @@
   --warning: #ffde32;
 }
 
+main {
+  margin-top: 150px;
+}
+
 /* Text colors */
 
 .text-primary {
