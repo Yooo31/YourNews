@@ -11,7 +11,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="far fa-building"></i></span>
             </div>
-            <input type="text" class="form-control" name="name" id="name" placeholder="Pseudo">
+            <input type="text" class="form-control" name="username" id="username" placeholder="Pseudo">
           </div>
         </div>
 
@@ -24,10 +24,12 @@
           </div>
         </div>
 
-        <div class="message"></div>
+        <div class="message">
+          <?= ($error) ? '<div class="alert alert-danger" role="alert">Erreur de connexion :(</div>' : '' ?>
+        </div>
 
         <div class="cta text-center mt-4 mb-1">
-          <button type="button" name="submit_register" id="registerButton" class="button button-medium button-orange">Se connecter</button>
+          <button type="submit" name="submit_register" id="registerButton" class="button button-medium button-orange">Se connecter</button>
         </div>
 
       </form>

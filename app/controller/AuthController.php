@@ -1,10 +1,11 @@
 <?php
 
 require_once 'core/Controller.php';
+require_once 'app/model/Auth.php';
 
 class AuthController extends Controller {
   public function showLoginForm() {
-    $this->view('Auth/login');
+    $this->view('Auth/login', ['error' => 0]);
   }
 
   public function login() {
@@ -15,9 +16,9 @@ class AuthController extends Controller {
     $user = $authModel->getUserByUsername($username);
 
     if (!$user || !password_verify($password, $user['password'])) {
-      // Mauvaise authentification, afficher un message d'erreur ou rediriger vers la page de connexion
+      $this->view('Auth/login', ['error' => 1]);
     } else {
-      // Authentification réussie, connecter l'utilisateur (par exemple, en créant une session) et rediriger vers une page sécurisée
+      $this->view('Auth/auth_succes');
     }
   }
 }
