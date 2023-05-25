@@ -12,6 +12,16 @@ class Router {
     $this->routes['POST'][$path] = $action;
   }
 
+  public function match($methods, $path, $action) {
+    if (!is_array($methods)) {
+      $methods = [$methods];
+    }
+
+    foreach ($methods as $method) {
+      $this->routes[$method][$path] = $action;
+    }
+  }
+
   public function dispatch() {
     $method = $_SERVER['REQUEST_METHOD'];
     $path = $_SERVER['REQUEST_URI'];
