@@ -1,4 +1,7 @@
 <?php
+session_set_cookie_params(0);
+session_start();
+
 ini_set('display_errors', 1);
 ini_set('error_reporting', E_ALL);
 
@@ -12,7 +15,10 @@ $router->get('/posts', 'PostsController@index');
 $router->get('/posts/create', 'PostsController@create');
 $router->get('/compte', 'CompteController@index');
 $router->get('/admin', 'AdminController@index');
-$router->get('/connexion', 'ConnectionController@index');
+$router->get('/connexion', 'AuthController@showLoginForm');
+$router->match('POST', '/connexion', 'AuthController@login');
+$router->get('/inscription', 'AuthController@showRegistrationForm');
+$router->match('POST', '/inscription', 'AuthController@register');
 ?>
 
 <!DOCTYPE html>

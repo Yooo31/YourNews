@@ -11,25 +11,30 @@
     <ul class="nav-items">
       <li><a class="text-black" href="/">Accueil</a></li>
       <li><a class="text-black" href="/posts">Blog</a></li>
-      <li class="not-visible"><a class="text-black" href="#">Administration</a></li>
+      <?php if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"]): ?>
+        <li><a class="text-black" href="#">Administration</a></li>
+      <?php endif; ?>
     </ul>
   </div>
   <div class="nav-right">
-    <ul class="not-visible nav-items">
-      <li>
-        <button class="nav-btn nav-new bg-primary text-white">Nouveau</button>
-      </li>
-      <li>
-        <button class="nav-btn nav-connect text-black">
-          <i class="fa-regular fa-user"></i>
-          <i class="fa-solid fa-caret-down"></i>
-        </button>
-      </li>
-    </ul>
-    <ul class="nav-items">
-      <li>
-        <a href="/connexion" class="nav-btn nav-new bg-primary text-white">Connexion</a>
-      </li>
-    </ul>
+    <?php if (isset($_SESSION["is_connected"]) && $_SESSION["is_connected"]): ?>
+      <ul class="nav-items">
+        <li>
+          <button class="nav-btn nav-new bg-primary text-white">Nouveau</button>
+        </li>
+        <li>
+          <button class="nav-btn nav-connect text-black">
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+        </li>
+      </ul>
+    <?php else: ?>
+      <ul class="nav-items">
+        <li>
+          <a href="/connexion" class="nav-btn nav-new bg-primary text-white">Connexion</a>
+        </li>
+      </ul>
+    <?php endif; ?>
   </div>
 </nav>
