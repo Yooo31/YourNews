@@ -15,8 +15,8 @@ if (!tableExists($pdo, 'articles')) {
             filePath VARCHAR(255) NOT NULL,
             created_at DATETIME NOT NULL,
             updated_at DATETIME NOT NULL,
-            approved_at DATETIME NOT NULL,
-            approved_by DATETIME NOT NULL,
+            approved_at DATETIME DEFAULT NULL,
+            approved_by DATETIME DEFAULT NULL,
             is_approved BOOLEAN DEFAULT false,
             reason_for_none_approuved TEXT DEFAULT NULL,
             is_private BOOLEAN DEFAULT false
