@@ -1,7 +1,7 @@
 <?php
 
 require_once 'core/Database.php';
-require_once 'script/migrate.php';
+require_once dirname(__FILE__) . '/script/Migrate.php';
 
 $pdo = Database::connect();
 
