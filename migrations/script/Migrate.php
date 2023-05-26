@@ -30,6 +30,8 @@ usort($migrationFiles, function($a, $b) {
 });
 
 foreach ($migrationFiles as $migrationFile) {
+  echo "Check for " . $migrationFile ."\n";
   include $migrationFile;
+  echo $migrationFile ." is done !\n";
 }
 ?>
