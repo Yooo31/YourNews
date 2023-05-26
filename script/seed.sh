@@ -1,6 +1,10 @@
 #!/bin/bash
 
 for file in $(find seeds/*.php); do
+  echo "Looking for $file"
   php $file
-  sleep 20
+  echo "$file is done !"
+  sleep 5
 done
+
+echo "All seeds are done"

@@ -28,7 +28,7 @@ CREATE DATABASE nom_bdd DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 
 ```sh
 CREATE USER 'user_name'@'localhost' IDENTIFIED BY 'user_pass';
-GRANT ALL PRIVILEGES ON nom_bdd.* TO 'user_pass'@'localhost';
+GRANT ALL PRIVILEGES ON nom_bdd.* TO 'user_name'@'%';
 FLUSH PRIVILEGES;
 ```
 
