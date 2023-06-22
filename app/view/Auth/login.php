@@ -3,6 +3,13 @@
     <div class="box-form-head">
       <h3 class="mb-2">Se connecter</h3>
     </div>
+
+    <div class="message">
+      <?php if (isset($message)) : ?>
+        <p class="error-message"><?= $message ?></p>
+      <?php endif; ?>
+    </div>
+
     <div class="box-form-content mt-2">
       <form method="POST" action="">
 
@@ -22,10 +29,6 @@
             </div>
             <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe">
           </div>
-        </div>
-
-        <div class="message">
-          <?= ($error) ? '<div class="alert alert-danger" role="alert">Erreur de connexion :(</div>' : '' ?>
         </div>
 
         <div class="cta text-center mt-4 mb-1">
