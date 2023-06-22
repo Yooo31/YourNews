@@ -17,5 +17,13 @@ class Posts {
 
     return $query->fetchAll(PDO::FETCH_ASSOC);
   }
+
+  public function getPostBySlug($slug) {
+    $query = "SELECT * FROM articles WHERE filePath = :slug";
+    $stmt = $this->db->prepare($query);
+    $stmt->bindParam(':slug', $slug);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
 }
 
