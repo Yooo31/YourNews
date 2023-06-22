@@ -12,7 +12,7 @@
       <li><a class="text-black" href="/">Accueil</a></li>
       <li><a class="text-black" href="/posts">Blog</a></li>
       <?php if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"]): ?>
-        <li><a class="text-black" href="#">Administration</a></li>
+        <li><a class="text-black" href="/admin">Administration</a></li>
       <?php endif; ?>
     </ul>
   </div>
