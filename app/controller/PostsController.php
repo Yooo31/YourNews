@@ -10,4 +10,19 @@ class PostsController extends Controller {
 
     $this->view('Posts/index', ['posts' => $latestArticles]);
   }
+
+  public function new() {
+    $this->view('Posts/new');
+  }
+
+  public function show() {
+    $path = $_SERVER['REQUEST_URI'];
+    $parts = explode('/', $path);
+    $word = end($parts);
+
+    $postsModel = new Posts();
+    $article = $postsModel->getPostBySlug($word);
+
+    $this->view('Posts/show', ['post' => $article]);
+  }
 }
