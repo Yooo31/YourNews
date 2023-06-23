@@ -15,13 +15,14 @@ $router->get('/posts', 'PostsController@index');
 $router->get('/posts/create', 'PostsController@create');
 $router->get('/compte', 'CompteController@index');
 $router->get('/admin', 'AdminController@index');
-$router->get('/admin/accounts', 'AdminController@getAccounts');
-$router->get('/admin/posts', 'AdminController@getPosts');
-$router->get('/admin/roles', 'AdminController@getRoles');
+$router->get('/admin-users', 'AdminController@getAccounts');
+$router->get('/admin-posts', 'AdminController@getPosts');
+$router->get('/admin-roles', 'AdminController@getRoles');
 $router->get('/connexion', 'AuthController@showLoginForm');
 $router->match('POST', '/connexion', 'AuthController@login');
 $router->get('/inscription', 'AuthController@showRegistrationForm');
 $router->match('POST', '/inscription', 'AuthController@register');
+$router->get('/logout', 'AuthController@logout');
 ?>
 
 <!DOCTYPE html>
