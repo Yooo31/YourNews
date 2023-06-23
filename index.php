@@ -8,10 +8,6 @@ ini_set('error_reporting', E_ALL);
 require_once 'core/Router.php';
 require_once 'core/Controller.php';
 
-// Faire un log error ici pour voir si on passe bien par là quand on clique posts
-
-error_log("avant new Routeur");
-
 $router = new Router();
 
 $router->get('/', 'HomeController@index');
@@ -44,11 +40,7 @@ $router->match('POST', '/inscription', 'AuthController@register');
 	</header>
 
 	<main>
-		<?php
-			error_log("Avant dispatch");
-			$router->dispatch(); 
-			error_log("Après dispatch");
-		?>
+		<?php $router->dispatch(); ?>
 	</main>
 
 	<footer>
