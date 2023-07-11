@@ -17,6 +17,14 @@ class Auth {
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
+  public function getUserById($id) {
+    $query = "SELECT * FROM users WHERE id = :id";
+    $stmt = $this->db->prepare($query);
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
   public function createUser($email, $password, $name, $lastname, $username) {
     $query = "INSERT INTO users (email, password, name, lastname, username, created_at) VALUES (:email, :password, :name, :lastname, :username, NOW())";
     $stmt = $this->db->prepare($query);

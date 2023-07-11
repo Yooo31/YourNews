@@ -18,10 +18,10 @@ class Posts {
     return $query->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public function getPostBySlug($slug) {
-    $query = "SELECT * FROM articles WHERE filePath = :slug";
+  public function getPostById($id) {
+    $query = "SELECT * FROM articles WHERE id = :id";
     $stmt = $this->db->prepare($query);
-    $stmt->bindParam(':slug', $slug);
+    $stmt->bindParam(':id', $id);
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }

@@ -2,6 +2,7 @@
 
 require_once 'core/Controller.php';
 require_once 'app/model/Posts.php';
+require_once 'app/model/Auth.php';
 
 class PostsController extends Controller {
   public function index() {
@@ -16,14 +17,15 @@ class PostsController extends Controller {
   }
 
   public function show() {
-    $path = $_SERVER['REQUEST_URI'];
-    $parts = explode('/', $path);
-    $word = end($parts);
+    $id = $_GET['id'];
 
     $postsModel = new Posts();
-    $article = $postsModel->getPostBySlug($word);
+    $article = $postsModel->getPostById($id);
 
-    $this->view('Posts/show', ['post' => $article]);
+    $authModel = new Auth();
+    $author = $authModel->getUserById($article['user_id']);
+
+    $this->view('Posts/show', ['post' => $article, 'author' => $author['name']]);
   }
 
   public function create() {
