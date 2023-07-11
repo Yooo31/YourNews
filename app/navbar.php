@@ -20,7 +20,7 @@
     <?php if (isset($_SESSION["is_connected"]) && $_SESSION["is_connected"]): ?>
       <ul class="nav-items">
         <li>
-          <a href="/posts/new" class="nav-btn nav-new bg-primary text-white">Nouveau</a>
+          <a href="/post-new" class="nav-btn nav-new bg-primary text-white">Nouveau</a>
         </li>
         <li>
           <button class="nav-btn nav-connect text-black">

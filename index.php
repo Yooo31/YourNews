@@ -12,12 +12,12 @@ $router = new Router();
 
 $router->get('/', 'HomeController@index');
 $router->get('/posts', 'PostsController@index');
-$router->get('/posts/new', 'PostsController@new');
+$router->get('/post-new', 'PostsController@new');
 $router->get('/compte', 'CompteController@index');
 $router->get('/admin', 'AdminController@index');
-$router->get('/admin/accounts', 'AdminController@getAccounts');
-$router->get('/admin/posts', 'AdminController@getPosts');
-$router->get('/admin/roles', 'AdminController@getRoles');
+$router->get('/admin-accounts', 'AdminController@getAccounts');
+$router->get('/admin-posts', 'AdminController@getPosts');
+$router->get('/admin-roles', 'AdminController@getRoles');
 $router->get('/connexion', 'AuthController@showLoginForm');
 $router->match('POST', '/connexion', 'AuthController@login');
 $router->get('/inscription', 'AuthController@showRegistrationForm');
