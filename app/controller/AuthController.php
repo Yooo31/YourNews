@@ -20,6 +20,7 @@ class AuthController extends Controller {
     } else {
       $_SESSION["is_connected"] = true;
       $_SESSION["user_id"] = $user['id'];
+      $_SESSION["account_type"] = $user['account_type'];
 
       $this->view('Auth/auth_success');
     }

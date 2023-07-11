@@ -11,7 +11,7 @@
     <ul class="nav-items">
       <li><a class="text-black" href="/">Accueil</a></li>
       <li><a class="text-black" href="/posts">Blog</a></li>
-      <?php if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"]): ?>
+      <?php if (isset($_SESSION["account_type"]) && ($_SESSION["account_type"] == "modo" || $_SESSION["account_type"] == "admin")): ?>
         <li><a class="text-black" href="/admin">Administration</a></li>
       <?php endif; ?>
     </ul>
