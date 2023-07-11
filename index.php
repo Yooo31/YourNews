@@ -53,8 +53,7 @@ $router->match('POST', '/inscription', 'AuthController@register');
 	</header>
 
 	<main>
-		<?php $router->dispatch();?>
-
+		<?php $router->dispatch(); ?>
 	</main>
 
 	<footer>

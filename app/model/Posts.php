@@ -26,12 +26,13 @@ class Posts {
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
-  public function createPost($titre, $description, $postArea) {
-    $query = "INSERT INTO articles (user_id, title, description, preview, content, created_at, updated_at) VALUES (3, :title, :description, 'jsp.png', :content, NOW(), NOW())";
+  public function createPost($titre, $description, $postArea, $user_id) {
+    $query = "INSERT INTO articles (user_id, title, description, preview, content, created_at, updated_at) VALUES (:user_id, :title, :description, 'jsp.png', :content, NOW(), NOW())";
     $stmt = $this->db->prepare($query);
     $stmt->bindParam(':title', $titre);
     $stmt->bindParam(':description', $description);
     $stmt->bindParam(':content', $postArea);
+    $stmt->bindParam(':user_id', $user_id);
 
 
     return $stmt->execute();

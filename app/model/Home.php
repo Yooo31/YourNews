@@ -10,14 +10,14 @@ class Home {
   }
 
   public function getLatestArticle() {
-    $query = $this->db->prepare('SELECT * FROM articles ORDER BY created_at DESC LIMIT 1');
+    $query = $this->db->prepare('SELECT * FROM articles WHERE is_approved = true ORDER BY created_at DESC LIMIT 1');
     $query->execute();
 
     return $query->fetch(PDO::FETCH_ASSOC);
   }
 
   public function getLatestArticles($limit) {
-    $query = $this->db->prepare('SELECT * FROM articles ORDER BY created_at DESC LIMIT :limit OFFSET 1');
+    $query = $this->db->prepare('SELECT * FROM articles WHERE is_approved = true ORDER BY created_at DESC LIMIT :limit OFFSET 1');
     $query->bindValue(':limit', $limit, PDO::PARAM_INT);
     $query->execute();
 
