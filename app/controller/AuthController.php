@@ -19,7 +19,10 @@ class AuthController extends Controller {
       $this->view('Auth/login', ['message' => 'Erreur de mot de passe']);
     } else {
       $_SESSION["is_connected"] = true;
-      $this->view('Auth/auth_succes');
+      $_SESSION["user_id"] = $user['id'];
+      $_SESSION["account_type"] = $user['account_type'];
+
+      $this->view('Auth/auth_success');
     }
   }
 

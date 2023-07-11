@@ -11,8 +11,8 @@
     <ul class="nav-items">
       <li><a class="text-black" href="/">Accueil</a></li>
       <li><a class="text-black" href="/posts">Blog</a></li>
-      <?php if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"]): ?>
-        <li><a class="text-black" href="#">Administration</a></li>
+      <?php if (isset($_SESSION["account_type"]) && ($_SESSION["account_type"] == "modo" || $_SESSION["account_type"] == "admin")): ?>
+        <li><a class="text-black" href="/admin">Administration</a></li>
       <?php endif; ?>
     </ul>
   </div>
@@ -20,7 +20,7 @@
     <?php if (isset($_SESSION["is_connected"]) && $_SESSION["is_connected"]): ?>
       <ul class="nav-items">
         <li>
-          <button class="nav-btn nav-new bg-primary text-white">Nouveau</button>
+          <a href="/post-new" class="nav-btn nav-new bg-primary text-white">Nouveau</a>
         </li>
         <li>
           <button class="nav-btn nav-connect text-black">

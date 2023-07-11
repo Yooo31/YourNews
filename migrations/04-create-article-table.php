@@ -12,7 +12,7 @@ if (!tableExists($pdo, 'articles')) {
             title VARCHAR(255) NOT NULL,
             description TEXT NOT NULL,
             preview VARCHAR(255) NOT NULL,
-            filePath VARCHAR(255) NOT NULL,
+            content TEXT NOT NULL,
             created_at DATETIME NOT NULL,
             updated_at DATETIME NOT NULL,
             approved_at DATETIME DEFAULT NULL,
