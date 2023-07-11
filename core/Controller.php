@@ -1,5 +1,4 @@
 <?php
-// core/Controller.php
 
 class Controller {
   public function view($viewName, $data = []) {

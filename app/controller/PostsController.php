@@ -25,4 +25,19 @@ class PostsController extends Controller {
 
     $this->view('Posts/show', ['post' => $article]);
   }
+
+  public function create() {
+    $titre = $_POST['title'];
+    $description = $_POST['description'];
+    $postArea = $_POST['postArea'];
+
+    $postModel = new Posts();
+    $success = $postModel->createPost($titre, $description, $postArea);
+
+    if ($success) {
+      $this->view('Posts/index');
+    } else {
+      echo "Erreur lors de la création du compte";
+    }
+  }
 }

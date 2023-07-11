@@ -9,8 +9,6 @@ class Database {
   public static function connect() {
     self::loadEnv();
 
-    echo self::$dbname;
-
     $pdo = new PDO("mysql:host=" . self::$host . ";dbname=" . self::$dbname, self::$username, self::$password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
