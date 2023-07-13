@@ -22,10 +22,7 @@ class PostsController extends Controller {
     $postsModel = new Posts();
     $article = $postsModel->getPostById($id);
 
-    $authModel = new Auth();
-    $author = $authModel->getUserById($article['user_id']);
-
-    $this->view('Posts/show', ['post' => $article, 'author' => $author['name']]);
+    $this->view('Posts/show', ['post' => $article]);
   }
 
   public function create() {

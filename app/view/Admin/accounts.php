@@ -15,7 +15,7 @@
   </thead>
   <tbody>
     <?php foreach ($users as $user) : ?>
-      <tr>
+      <tr id="<?php echo $user['id']; ?>">
         <td><?php echo $user['username']; ?></td>
         <td><?php echo $user['account_type']; ?></td>
         <td><?php echo $user['email']; ?></td>
@@ -81,13 +81,3 @@
     <button onclick="closePopUp()">Annuler</button>
   </div>
 </div>
-
-<script>
-  function openPopUp() {
-    document.getElementById("popup").style.display = "block";
-  }
-
-  function closePopUp() {
-    document.getElementById("popup").style.display = "none";
-  }
-</script>

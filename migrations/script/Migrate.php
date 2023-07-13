@@ -34,4 +34,3 @@ foreach ($migrationFiles as $migrationFile) {
   include $migrationFile;
   echo $migrationFile ." is done !\n";
 }
-?>

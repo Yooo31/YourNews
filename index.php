@@ -20,7 +20,9 @@ $router->get('/admin', 'AdminController@index');
 $router->get('/admin-accounts', 'AdminController@getAccounts');
 $router->post('/admin-accounts-update', 'AdminController@updateUser');
 $router->get('/admin-posts', 'AdminController@getPosts');
-$router->get('/admin-roles', 'AdminController@getRoles');
+$router->post('/admin-posts-reject', 'AdminController@rejectPost');
+$router->post('/admin-posts-approve', 'AdminController@approvePost');
+$router->get('/admin-post-show', 'AdminController@show');
 $router->get('/connexion', 'AuthController@showLoginForm');
 $router->match('POST', '/connexion', 'AuthController@login');
 $router->get('/inscription', 'AuthController@showRegistrationForm');
@@ -63,7 +65,7 @@ $router->match('POST', '/inscription', 'AuthController@register');
 		<!-- FOOTER -->
 	</footer>
 
-	<script type="text/javascript" src=""></script>
+	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
 </html>

@@ -5,31 +5,31 @@ require_once 'seeds/script/Seed.php';
 $now = date('Y-m-d H:i:s');
 
 $secondElement = [
-  'user_id' => 18,
+  'user_id' => 1,
   'title' => '2ème article',
   'description' => '2ème article',
   'preview' => 'jsp',
-  'filePath' => 'jsp',
+  'content' => 'Voici du contenu',
   'created_at' => $now,
   'updated_at' => $now,
 ];
 
 $thirdElement = [
-  'user_id' => 18,
+  'user_id' => 1,
   'title' => '3 article',
   'description' => '3 article',
   'preview' => 'jsp',
-  'filePath' => 'jsp',
+  'content' => 'Voici du contenu',
   'created_at' => $now,
   'updated_at' => $now,
 ];
 
 $forthElement = [
-  'user_id' => 18,
+  'user_id' => 1,
   'title' => '4 article',
   'description' => '4 article',
   'preview' => 'jsp',
-  'filePath' => 'jsp',
+  'content' => 'Voici du contenu',
   'created_at' => $now,
   'updated_at' => $now,
 ];

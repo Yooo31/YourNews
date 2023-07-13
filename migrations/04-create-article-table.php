@@ -16,9 +16,8 @@ if (!tableExists($pdo, 'articles')) {
             created_at DATETIME NOT NULL,
             updated_at DATETIME NOT NULL,
             approved_at DATETIME DEFAULT NULL,
-            approved_by DATETIME DEFAULT NULL,
+            as_moderated BOOLEAN DEFAULT false,
             is_approved BOOLEAN DEFAULT false,
-            reason_for_none_approuved TEXT DEFAULT NULL,
             is_private BOOLEAN DEFAULT false
     )";
 
