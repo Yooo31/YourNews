@@ -2,7 +2,7 @@
 
 require_once 'core/Database.php';
 
-class Auth {
+class Admin {
   private $db;
 
   public function __construct() {

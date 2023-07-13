@@ -1,0 +1,26 @@
+.tableau-style {
+  border-collapse: collapse;
+  min-width: 60%;
+  width: auto;
+  box-shadow:  0 5px 50px rgba(0, 0, 0, 0.15);
+  margin: 100px auto;
+  border: 2px solid midnightblue;
+}
+
+thead tr {
+  background-color: midnightblue;
+  color: #fff;
+  text-align: left;
+}
+
+th, td {
+  padding: 15px 20px;
+}
+
+tbody tr, td, th {
+  border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+}

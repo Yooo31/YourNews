@@ -18,6 +18,7 @@ $router->post('/post-new', 'PostsController@create');
 $router->get('/compte', 'CompteController@index');
 $router->get('/admin', 'AdminController@index');
 $router->get('/admin-accounts', 'AdminController@getAccounts');
+$router->post('/admin-accounts-update', 'AdminController@updateUser');
 $router->get('/admin-posts', 'AdminController@getPosts');
 $router->get('/admin-roles', 'AdminController@getRoles');
 $router->get('/connexion', 'AuthController@showLoginForm');
@@ -35,6 +36,8 @@ $router->match('POST', '/inscription', 'AuthController@register');
 	<link rel="stylesheet" type="text/css" href="assets/css/base.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/articles_list.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/admin.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/popup.css">
 
 	<script src="https://cdn.tiny.cloud/1/iizb4h3ezf1jt4uxmkv3bl4kzdkpi2nqke9vzt4ej7pptue2/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
