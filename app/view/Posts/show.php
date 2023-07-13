@@ -15,7 +15,7 @@
             <p><?php echo $post['description']; ?></p>
             <div class="date">
               <span><?php echo date_format(date_create($post['created_at']), "d F"); ?></span>
-              <span><?php echo $author; ?></span>
+              <span><?php echo $post['creator_username']; ?></span>
             </div>
           </div>
         </div>

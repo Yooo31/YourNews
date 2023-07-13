@@ -18,8 +18,22 @@ class Posts {
     return $query->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  public function getallArticles() {
+    $query = $this->db->prepare(' SELECT articles.*, users.username AS creator_username
+                                  FROM articles
+                                  INNER JOIN users ON articles.user_id = users.id
+                                  WHERE as_moderated = false');
+    $query->execute();
+
+    return $query->fetchAll(PDO::FETCH_ASSOC);
+  }
+
   public function getPostById($id) {
-    $query = "SELECT * FROM articles WHERE id = :id";
+    $query = "SELECT articles.*, users.username AS creator_username
+              FROM articles
+              INNER JOIN users ON articles.user_id = users.id
+              WHERE articles.id = :id";
+
     $stmt = $this->db->prepare($query);
     $stmt->bindParam(':id', $id);
     $stmt->execute();
@@ -34,6 +48,21 @@ class Posts {
     $stmt->bindParam(':content', $postArea);
     $stmt->bindParam(':user_id', $user_id);
 
+    return $stmt->execute();
+  }
+
+  public function blockPost($elementId) {
+    $query = "UPDATE articles SET approved_at = NOW(), as_moderated = 1 WHERE id = :elementId";
+    $stmt = $this->db->prepare($query);
+    $stmt->bindParam(':elementId', $elementId);
+
+    return $stmt->execute();
+  }
+
+  public function authorizePost($elementId) {
+    $query = "UPDATE articles SET approved_at = NOW(), is_approved = 1, as_moderated = 1 WHERE id = :elementId";
+    $stmt = $this->db->prepare($query);
+    $stmt->bindParam(':elementId', $elementId);
 
     return $stmt->execute();
   }
