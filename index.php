@@ -16,6 +16,7 @@ $router->get('/posts', 'PostsController@index');
 $router->get('/post', 'PostsController@show');
 $router->get('/post-new', 'PostsController@new');
 $router->post('/post-new', 'PostsController@create');
+$router->post('/post-delete', 'PostsController@delete');
 
 $router->get('/compte', 'CompteController@index');
 

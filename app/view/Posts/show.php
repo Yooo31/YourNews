@@ -1,4 +1,11 @@
 <div class="container">
+  <?php if ($post['user_id'] == $_SESSION["user_id"])  { ?>
+    <form method="post" action="/post-delete">
+      <input type="hidden" name="postId" value="<?php echo $post['id']; ?>">
+      <button type="submit">Supprimer</button>
+    </form>
+  <?php } ?>
+
   <div class="row">
     <div class="col-6">
       <div class="post-view mb-5">

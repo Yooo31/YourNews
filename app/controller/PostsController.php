@@ -2,6 +2,7 @@
 
 require_once 'core/Controller.php';
 require_once 'app/model/Posts.php';
+require_once 'app/model/DeletedPost.php';
 require_once 'app/model/Auth.php';
 
 class PostsController extends Controller {
@@ -38,6 +39,26 @@ class PostsController extends Controller {
       $this->view('Posts/publication_success');
     } else {
       echo "Erreur lors de la création du compte";
+    }
+  }
+
+  public function delete() {
+    $elementId = $_POST['postId'];
+    $userId = $_SESSION["user_id"];
+
+    $postsModel = new Posts();
+    $success = $postsModel->deletePost($elementId);
+
+    if ($success) {
+      $deletedPostModel = new DeletedPost();
+      $success = $deletedPostModel->createPost($userId, $elementId);
+
+      if ($success) {
+        header('Location: /posts');
+        exit();
+      } else {
+        echo "Erreur lors de suppression";
+      }
     }
   }
 }

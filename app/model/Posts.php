@@ -66,5 +66,12 @@ class Posts {
 
     return $stmt->execute();
   }
-}
 
+  public function deletePost($id) {
+    $sql = "DELETE FROM articles WHERE id = :id";
+    $stmt = $this->db->prepare($sql);
+    $stmt->bindParam(':id', $id);
+
+    return $stmt->execute();
+  }
+}
