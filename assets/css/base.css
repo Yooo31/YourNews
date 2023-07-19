@@ -13,6 +13,27 @@
   --warning: #ffde32;
 }
 
+body {
+  color: var(--complementary);
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+a {
+  color: var(--complementary);
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary-i);
+}
+
 main {
   margin-top: 150px;
 }
@@ -20,101 +41,105 @@ main {
 /* Text colors */
 
 .text-primary {
-  color: --primary;
+  color: var(--primary);
 }
 
 .text-primary-i {
-  color: --primary-i;
+  color: var(--primary-i);
 }
 
 .text-secondary {
-  color: --secondary;
+  color: var(--secondary);
 }
 
 .text-secondary-i {
-  color: --secondary-i;
+  color: var(--secondary-i);
 }
 
 .text-complementary {
-  color: --complementary;
+  color: var(--complementary);
 }
 
 .text-complementary-i {
-  color: --complementary-i;
+  color: var(--complementary-i);
 }
 
 .text-gray {
-  color: --gray;
+  color: var(--gray);
 }
 
 .text-gray-i {
-  color: --gray-i;
+  color: var(--gray-i);
 }
 
 .text-succes {
-  color: --succes;
+  color: var(--succes);
 }
 
 .text-error {
-  color: --error;
+  color: var(--error);
 }
 
 .text-info {
-  color: --info;
+  color: var(--info);
 }
 
 .text-warning {
-  color: --warning;
+  color: var(--warning);
+}
+
+.text-white {
+  color: #fff;
 }
 
 /* Background Colors */
 
 .bg-primary {
-  background-color: --primary;
+  background-color: var(--primary);
 }
 
 .bg-primary-i {
-  background-color: --primary-i;
+  background-color: var(--primary-i);
 }
 
 .bg-secondary {
-  background-color: --secondary;
+  background-color: var(--secondary);
 }
 
 .bg-secondary-i {
-  background-color: --secondary-i;
+  background-color: var(--secondary-i);
 }
 
 .bg-complementary {
-  background-color: --complementary;
+  background-color: var(--complementary);
 }
 
 .bg-complementary-i {
-  background-color: --complementary-i;
+  background-color: var(--complementary-i);
 }
 
 .bg-gray {
-  background-color: --gray;
+  background-color: var(--gray);
 }
 
 .bg-gray-i {
-  background-color: --gray-i;
+  background-color: var(--gray-i);
 }
 
 .bg-succes {
-  background-color: --succes;
+  background-color: var(--succes);
 }
 
 .bg-error {
-  background-color: --error;
+  background-color: var(--error);
 }
 
 .bg-info {
-  background-color: --info;
+  background-color: var(--info);
 }
 
 .bg-warning {
-  background-color: --warning;
+  background-color: var(--warning);
 }
 
 #page .container {

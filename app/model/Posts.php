@@ -10,7 +10,7 @@ class Posts {
   }
 
   public function getListArticles($limit, $page) {
-    $query = $this->db->prepare('SELECT * FROM articles ORDER BY created_at DESC LIMIT :limit OFFSET :offset');
+    $query = $this->db->prepare('SELECT * FROM articles WHERE is_approved = true ORDER BY created_at DESC LIMIT :limit OFFSET :offset');
     $query->bindValue(':limit', $limit, PDO::PARAM_INT);
     $query->bindValue(':offset', $page * 9, PDO::PARAM_INT);
     $query->execute();

@@ -1,8 +1,7 @@
 <nav>
   <div class="nav-left">
     <div class="logo">
-      <h2>YN</h2>
-      <img src="" alt="">
+      <img src="assets/img/logo-yournews-transparent.png" alt="YourNews Logo">
     </div>
     <div class="toggle">
       <i class="fa-solid fa-bars open"></i>
@@ -23,10 +22,9 @@
           <a href="/post-new" class="nav-btn nav-new bg-primary text-white">Nouveau</a>
         </li>
         <li>
-          <button class="nav-btn nav-connect text-black">
-            <i class="fa-regular fa-user"></i>
-            <i class="fa-solid fa-caret-down"></i>
-          </button>
+          <a href="/deconnexion" class="nav-btn nav-connect text-black">
+            <i class="fas fa-sign-out-alt"></i>
+          </a>
         </li>
       </ul>
     <?php else: ?>
