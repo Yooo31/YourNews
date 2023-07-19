@@ -6,10 +6,10 @@ $now = date('Y-m-d H:i:s');
 
 $seventhElement = [
   'user_id' => 1,
-  'title' => '7 article',
-  'description' => '7 article',
+  'title' => 'Exploration marine',
+  'description' => "Explorez les profondeurs de l'océan et découvrez les merveilles cachées de la vie marine.",
   'preview' => 'jsp',
-  'content' => 'Voici du contenu',
+  'content' => "L'océan est le berceau d'une biodiversité incroyable, des récifs coralliens colorés aux créatures marines étonnantes. Plongez dans l'univers aquatique et découvrez les secrets des abysses.",
   'created_at' => $now,
   'updated_at' => $now,
 ];

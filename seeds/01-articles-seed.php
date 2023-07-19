@@ -6,10 +6,10 @@ $now = date('Y-m-d H:i:s');
 
 $firstElement = [
   'user_id' => 1,
-  'title' => '1er article',
-  'description' => '1er article',
+  'title' => 'Les merveilles de la nature',
+  'description' => 'Découvrez la beauté de la nature dans toute sa splendeur. Des paysages époustouflants et des animaux fascinants vous attendent',
   'preview' => 'jsp',
-  'content' => 'Voici du contenu',
+  'content' => "Laissez-vous émerveiller par les vastes étendues de forêts verdoyantes, les sommets enneigés des montagnes majestueuses, et les eaux cristallines des rivières. Observez les oiseaux multicolores virevolter dans le ciel et les créatures sauvages vivre en harmonie avec leur environnement. La nature est une source inépuisable de surprises et d'émerveillement.",
   'created_at' => $now,
   'updated_at' => $now,
 ];

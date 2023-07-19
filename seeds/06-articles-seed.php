@@ -6,10 +6,10 @@ $now = date('Y-m-d H:i:s');
 
 $sixthElement = [
   'user_id' => 1,
-  'title' => '6 article',
-  'description' => '6 article',
+  'title' => 'Voyage dans le temps',
+  'description' => 'Remontez le temps et revivez des moments historiques qui ont façonné notre monde.',
   'preview' => 'jsp',
-  'content' => 'Voici du contenu',
+  'content' => "L'histoire est le témoin des événements passés qui ont influencé notre présent. Explorez les civilisations anciennes, les batailles épiques et les figures emblématiques qui ont marqué l'humanité.",
   'created_at' => $now,
   'updated_at' => $now,
 ];

@@ -6,10 +6,10 @@ $now = date('Y-m-d H:i:s');
 
 $thirdElement = [
   'user_id' => 1,
-  'title' => '3 article',
-  'description' => '3 article',
+  'title' => 'Voyage dans le temps',
+  'description' => "Plongez dans l'histoire à travers des voyages dans le temps captivants. Revivez les époques passées et découvrez les événements qui ont façonné notre monde.",
   'preview' => 'jsp',
-  'content' => 'Voici du contenu',
+  'content' => "Des châteaux médiévaux aux vestiges des anciennes civilisations, en passant par les musées remplis d'artefacts historiques, le voyage dans le temps est une porte ouverte vers le passé. Explorez les rues pavées des vieux quartiers, écoutez les récits des ancêtres, et émerveillez-vous devant les trésors d'une époque révolue.",
   'created_at' => $now,
   'updated_at' => $now,
 ];
