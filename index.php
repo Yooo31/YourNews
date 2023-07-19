@@ -11,11 +11,14 @@ require_once 'core/Controller.php';
 $router = new Router();
 
 $router->get('/', 'HomeController@index');
+
 $router->get('/posts', 'PostsController@index');
 $router->get('/post', 'PostsController@show');
 $router->get('/post-new', 'PostsController@new');
 $router->post('/post-new', 'PostsController@create');
+
 $router->get('/compte', 'CompteController@index');
+
 $router->get('/admin', 'AdminController@index');
 $router->get('/admin-accounts', 'AdminController@getAccounts');
 $router->post('/admin-accounts-update', 'AdminController@updateUser');
@@ -23,6 +26,7 @@ $router->get('/admin-posts', 'AdminController@getPosts');
 $router->post('/admin-posts-reject', 'AdminController@rejectPost');
 $router->post('/admin-posts-approve', 'AdminController@approvePost');
 $router->get('/admin-post-show', 'AdminController@show');
+
 $router->get('/connexion', 'AuthController@showLoginForm');
 $router->match('POST', '/connexion', 'AuthController@login');
 $router->get('/inscription', 'AuthController@showRegistrationForm');

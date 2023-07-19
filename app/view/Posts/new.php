@@ -10,6 +10,9 @@
   <textarea id="postArea" name="postArea"></textarea>
 
   <div class="cta text-center mt-4 mb-1">
+    <a href="/posts" class="btn btn-secondary">Annuler</a>
     <button type="submit" name="submit_post" id="postButton" class="button button-medium button-orange">Publier !</button>
   </div>
 </form>
+
+

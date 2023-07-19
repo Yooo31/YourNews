@@ -3,13 +3,6 @@
     <div class="col-6">
       <div class="post-view mb-5">
         <div class="h2">
-          <div class="post-picture lazy" style="background-image: url(&quot;assets/img/jsp.png&quot;); height: 250px"></div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="post-view mb-5">
-        <div class="h2">
           <div class="post-desc pl-4">
             <div class="h3"><?php echo $post['title']; ?></div>
             <p><?php echo $post['description']; ?></p>
