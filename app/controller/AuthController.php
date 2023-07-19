@@ -20,10 +20,20 @@ class AuthController extends Controller {
     } else {
       $_SESSION["is_connected"] = true;
       $_SESSION["user_id"] = $user['id'];
+      $_SESSION["user_name"] = $user['username'];
       $_SESSION["account_type"] = $user['account_type'];
 
       $this->view('Auth/auth_success');
     }
+  }
+
+  public function logout() {
+    $_SESSION["is_connected"] = false;
+    $_SESSION["user_id"] = "";
+    $_SESSION["user_name"] = "";
+    $_SESSION["account_type"] = "";
+
+    $this->view('Auth/auth_success');
   }
 
   public function showRegistrationForm() {

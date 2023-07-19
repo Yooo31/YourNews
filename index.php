@@ -32,7 +32,7 @@ $router->get('/connexion', 'AuthController@showLoginForm');
 $router->match('POST', '/connexion', 'AuthController@login');
 $router->get('/inscription', 'AuthController@showRegistrationForm');
 $router->match('POST', '/inscription', 'AuthController@register');
-$router->get('/deconnexion', 'AuthController@disconnect');
+$router->get('/deconnexion', 'AuthController@logout');
 ?>
 
 <!DOCTYPE html>
