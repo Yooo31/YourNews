@@ -22,6 +22,7 @@ class AuthController extends Controller {
       $_SESSION["user_id"] = $user['id'];
       $_SESSION["user_name"] = $user['username'];
       $_SESSION["account_type"] = $user['account_type'];
+      $_SESSION["is_validated"] = $user['is_validated'];
 
       $this->view('Auth/auth_success');
     }
@@ -33,7 +34,7 @@ class AuthController extends Controller {
     $_SESSION["user_name"] = "";
     $_SESSION["account_type"] = "";
 
-    $this->view('Auth/auth_success');
+    $this->view('Auth/logout_success');
   }
 
   public function showRegistrationForm() {

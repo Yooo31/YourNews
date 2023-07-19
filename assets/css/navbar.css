@@ -66,3 +66,7 @@ nav {
   border: 2px solid var(--secondary);
 }
 
+.nav-items .btn {
+  padding: 4px 10px;
+}
+

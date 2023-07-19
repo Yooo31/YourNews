@@ -18,11 +18,13 @@
   <div class="nav-right">
     <?php if (isset($_SESSION["is_connected"]) && $_SESSION["is_connected"]): ?>
       <ul class="nav-items">
+        <?php if (isset($_SESSION["is_validated"]) && $_SESSION["is_validated"]): ?>
+          <li>
+            <a href="/post-new" class="btn btn-primary mr-3">Nouveau</a>
+          </li>
+        <?php endif; ?>
         <li>
-          <a href="/post-new" class="nav-btn nav-new bg-primary text-white">Nouveau</a>
-        </li>
-        <li>
-          <a href="/deconnexion" class="nav-btn nav-connect text-black">
+          <a href="/deconnexion" class="btn btn-secondary-revert">
             <i class="fas fa-sign-out-alt"></i>
           </a>
         </li>
@@ -30,7 +32,10 @@
     <?php else: ?>
       <ul class="nav-items">
         <li>
-          <a href="/connexion" class="nav-btn nav-new bg-primary text-white">Connexion</a>
+          <a href="/connexion" class="btn btn-primary mr-3">Connexion</a>
+        </li>
+        <li>
+          <a href="/inscription" class="btn btn-secondary-revert">Inscription</a>
         </li>
       </ul>
     <?php endif; ?>
