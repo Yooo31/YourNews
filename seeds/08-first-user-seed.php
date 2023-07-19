@@ -6,7 +6,7 @@ $now = date('Y-m-d H:i:s');
 
 $adminUser = [
   'email' => 'yoan@mail.com',
-  'password' => 'pass',
+  'password' => password_hash('pass', PASSWORD_DEFAULT),
   'name' => 'Yoan',
   'lastname' => 'Martins',
   'username' => 'yoo',
