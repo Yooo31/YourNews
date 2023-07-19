@@ -8,7 +8,7 @@
   --gray: #616665;
   --gray-i: #383d3d;
   --succes: #47b92b;
-  --error: #eb0010;
+  --danger: #eb0010;
   --info: #00b9ac;
   --warning: #ffde32;
 }
@@ -89,7 +89,7 @@ main {
 }
 
 .text-white {
-  color: #fff;
+  color: #fff !important;
 }
 
 /* Background Colors */
@@ -130,8 +130,8 @@ main {
   background-color: var(--succes);
 }
 
-.bg-error {
-  background-color: var(--error);
+.bg-danger {
+  background-color: var(--danger) !important;
 }
 
 .bg-info {
@@ -167,6 +167,12 @@ main {
 
 .d-flex {
   display: flex;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 .col-1 {
@@ -410,4 +416,34 @@ main {
 
 .not-visible {
   visibility: hidden;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }

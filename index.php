@@ -45,6 +45,7 @@ $router->get('/deconnexion', 'AuthController@disconnect');
 	<link rel="stylesheet" type="text/css" href="assets/css/articles_list.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/admin.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/popup.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/article_show.css">
 
 	<script src="https://cdn.tiny.cloud/1/iizb4h3ezf1jt4uxmkv3bl4kzdkpi2nqke9vzt4ej7pptue2/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 	<script>

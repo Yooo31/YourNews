@@ -1,0 +1,53 @@
+#post-show h1 {
+  font-size: 50px;
+}
+
+#post-show .post-desc {
+  color: gray !important;
+  margin: 50px;
+}
+
+#post-show .post-content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#post-show .post-end {
+  margin-top: 100px !important;
+  margin-bottom: 100px;
+}
+
+#post-show hr {
+  margin: auto;
+  max-width: 75%;
+}
+
+.btn.btn-delete {
+  color : #fff;
+  background-color: var(--danger);
+}
+
+.btn.btn-delete:hover {
+  color : #000;
+  background-color: #fff;
+  border: var(--danger) solid 2px;
+}
+
+#post-show .post-content h1 {
+  color: var(--secondary) !important;
+  margin-bottom: 25px;
+}
+
+#post-show .post-content h2 {
+  color: var(--secondary) !important;
+  margin-bottom: 25px;
+}
+
+#post-show .post-content h3 {
+  color: var(--secondary) !important;
+  margin-bottom: 25px;
+}
+
+#post-show .post-content p {
+  margin-bottom: 20px !important;
+}
