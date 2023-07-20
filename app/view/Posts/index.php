@@ -2,6 +2,6 @@
 
 <div class="container mt-5 mb-5">
   <div class="row">
-  <?php $posts ? require_once '_posts.php' : require_once '_empty.php'; ?>
+    <?php $posts ? require_once '_posts.php' : require_once '_empty.php'; ?>
   </div>
 </div>

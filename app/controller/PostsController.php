@@ -13,10 +13,6 @@ class PostsController extends Controller {
     $this->view('Posts/index', ['posts' => $latestArticles]);
   }
 
-  public function new() {
-    $this->view('Posts/new');
-  }
-
   public function show() {
     $id = $_GET['id'];
 
@@ -24,6 +20,10 @@ class PostsController extends Controller {
     $article = $postsModel->getPostById($id);
 
     $this->view('Posts/show', ['post' => $article]);
+  }
+
+  public function new() {
+    $this->view('Posts/new');
   }
 
   public function create() {

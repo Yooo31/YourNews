@@ -9,7 +9,7 @@
         </a>
       </div>
       <div class="col text-right">
-        <?php if ($post['user_id'] == $_SESSION["user_id"])  { ?>
+        <?php if (isset($_SESSION["user_id"]) && $post['user_id'] == $_SESSION["user_id"])  { ?>
           <form method="post" action="/post-delete">
             <input type="hidden" name="postId" value="<?php echo $post['id']; ?>">
             <button class="btn btn-delete" type="submit">

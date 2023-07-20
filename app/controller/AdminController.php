@@ -79,7 +79,6 @@ class AdminController extends Controller {
 
   public function approvePost() {
     $elementId = $_POST['postId'];
-    $moderatorId = $_SESSION["user_id"];
 
     $postModel = new Posts();
     $success = $postModel->authorizePost($elementId);

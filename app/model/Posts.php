@@ -10,19 +10,13 @@ class Posts {
   }
 
   public function getListArticles($limit, $page) {
-    $query = $this->db->prepare('SELECT * FROM articles WHERE is_approved = true ORDER BY created_at DESC LIMIT :limit OFFSET :offset');
+    $query = $this->db->prepare(' SELECT * FROM articles
+                                  WHERE is_approved = true
+                                  ORDER BY created_at
+                                  DESC LIMIT :limit OFFSET :offset');
+
     $query->bindValue(':limit', $limit, PDO::PARAM_INT);
     $query->bindValue(':offset', $page * 9, PDO::PARAM_INT);
-    $query->execute();
-
-    return $query->fetchAll(PDO::FETCH_ASSOC);
-  }
-
-  public function getallArticles() {
-    $query = $this->db->prepare(' SELECT articles.*, users.username AS creator_username
-                                  FROM articles
-                                  INNER JOIN users ON articles.user_id = users.id
-                                  WHERE as_moderated = false');
     $query->execute();
 
     return $query->fetchAll(PDO::FETCH_ASSOC);
@@ -41,7 +35,9 @@ class Posts {
   }
 
   public function createPost($titre, $description, $postArea, $user_id) {
-    $query = "INSERT INTO articles (user_id, title, description, preview, content, created_at, updated_at) VALUES (:user_id, :title, :description, 'jsp.png', :content, NOW(), NOW())";
+    $query = "INSERT INTO articles (user_id, title, description, preview, content, created_at, updated_at)
+              VALUES (:user_id, :title, :description, 'jsp.png', :content, NOW(), NOW())";
+
     $stmt = $this->db->prepare($query);
     $stmt->bindParam(':title', $titre);
     $stmt->bindParam(':description', $description);
@@ -49,6 +45,16 @@ class Posts {
     $stmt->bindParam(':user_id', $user_id);
 
     return $stmt->execute();
+  }
+
+  public function getallArticles() {
+    $query = $this->db->prepare(' SELECT articles.*, users.username AS creator_username
+                                  FROM articles
+                                  INNER JOIN users ON articles.user_id = users.id
+                                  WHERE as_moderated = false');
+    $query->execute();
+
+    return $query->fetchAll(PDO::FETCH_ASSOC);
   }
 
   public function blockPost($elementId) {

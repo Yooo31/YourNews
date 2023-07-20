@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-6 p-5">
+    <div class="col-6 p-5 m-auto">
       <h3 class="mb-3">S'inscrire</h3>
 
       <div class="message mb-5 mt-5">

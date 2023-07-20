@@ -38,7 +38,7 @@ $router->get('/deconnexion', 'AuthController@logout');
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Titre par défaut</title>
+	<title>YourNews | Bienvenue</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
